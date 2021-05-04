@@ -13,10 +13,32 @@
     max-width: 1040px;
     border: 1px solid black;
     margin: 0 auto;
-}*/
+    align-content: center;
+} */
 .clear{
     clear: both;
 }
+
+#mast{
+    position: fixed;
+}
+
+#section{
+    background: url('https://via.placeholder.com/150/0000FF/808080 ?Text=BlogginC/O https://placeholder.com/');
+    background-size: cover;
+    padding: 100px;
+
+}
+.wrap{
+    background-color:rgba(212, 150, 150, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 40px auto ;
+    width: 70%;
+    align-content: center;
+}
+
+/*Comment section*/
 
 #respond {
     margin-top: 40px;

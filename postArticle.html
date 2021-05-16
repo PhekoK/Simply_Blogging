@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <div class="container">
+
             <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
                 
                 <div class="container-fluid">
@@ -46,10 +46,78 @@
            </div>
         
           </nav>
-        </div>
     </header>
-    <div class="container">
 
+    <!--BODY CONTENT-->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <!--MAIN CONTENT HERE-->
+            <h4>POST AN ARTICLE</h4>
+            <div class="row">
+              <div class="col-sm-6">
+                 <span>Add Blog Title</span>
+                 <textarea name="" id="" ></textarea>
+                 <div>
+                   <span>Add content</span>
+                   <textarea name="" id="" cols="30" rows="10"></textarea>
+                 </div>
+              </div>
+              <div class="col-sm-6">
+                <span>Date</span>
+                <input type="date">
+                <span>Add Category</span>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                  <option selected>None</option>
+                  <option value="1" id="politics">Politics</option>
+                  <option value="2" id="tech">Technology</option>
+                  <option value="3" id="other">Other</option>
+                </select>
+                <button class="btn btn-success" id="postartbtn">Post</button>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+            <!--SIDE BAR HERE-->
+          </div>
+        </div>
+      
+      </div>
+      
+    </article>
+    <!--FOOTER-->
+    <footer id="footer">
+      <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a class="footer-logo" href="">Simply Bloggin'</a>
+          <p>Something abou t the blog.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Useful links</h4>
+          <ul>
+            <li><a>Home</a></li>
+            <li><a>Terms and COnditions</a></li>
+            <li><a>Contact Us</a></li>
+            <li><a>Privacy Policy</a></li>
+            <li><a>Newsletter</a></li>
+          </ul>
+     </div>
+     <div class="col-md-4">
+          <h4>Newsletter</h4>
+          <form class="d-flex">
+         <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+         <button class="btn btn-outline-danger" type="submit">Search</button>
+         </form>
+     </div>
+      </div>
+      <div class="w-100 text-center credits">
+        <p>Made by <a>Karabo Pheko</a> &copy; 2021. All rights reserved.</p>
+      </div>
     </div>
+
+   </footer>
 </body>
 </html>

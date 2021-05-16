@@ -1,0 +1,47 @@
+    body{
+       /* text-align: center;
+         align-items: center;
+        /* padding-top: 40px;
+         padding-bottom: 40px;
+         background-color: rgb(255, 255, 244);
+         box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+         height: 100%; */
+         padding-top: 40px;
+         padding-bottom: 40px;
+         height: 100%;
+         align-items: center;
+         box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    }
+
+    .form-signin{
+      /*  width: 80%;
+        max-width: 330px;
+        padding: 20px;
+        margin: center; */
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
+    }
+    
+    .form-signin .checkbox{
+        font-weight: 600;
+    }
+    
+    .form-signin .form-floating:focus-visible{
+        z-index: 2;
+    }
+    
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    #BtnSignIn{
+        background-color: rgb(31, 45, 58) ;
+        color: white;
+    }
+
+    #logcont{
+        align-items: center;
+    }

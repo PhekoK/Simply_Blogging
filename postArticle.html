@@ -49,44 +49,92 @@
     </header>
 
     <!--BODY CONTENT-->
-    <article>
       <div class="container">
         <div class="row">
-          <div class="col-sm-8">
             <!--MAIN CONTENT HERE-->
-            <h4>POST AN ARTICLE</h4>
+            <h4>POST AN ARTICLE</h4> <br> <hr> <br>
             <div class="row">
-              <div class="col-sm-6">
-                 <span>Add Blog Title</span>
-                 <textarea name="" id="" ></textarea>
+              <div class="col-lg-6">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <span>Add Blog Title</span> 
+                 <label class="validation-error hide" id="ValidationError">The field is
+                  required.</label>
+                 <input type="text" id="selBlogTitle">
+                  </div>
+                  <div class="col-lg-6">
+                    <span>Add Category</span>
+                    <select id="selCategory" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                      <option selected>None</option>
+                      <option value="1" id="politics">Politics</option>
+                      <option value="2" id="tech">Technology</option>
+                      <option value="3" id="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6">
+                    <span>Date</span>
+                    <input type="date" id="selDate">
+                  </div>
+                  <div class="col-lg-6">
+                    <span>Select Image(Optional)</span>
+                    <input type="file" accept="image/*" onchange="preview_image(event)" id="selPhoto">
+                    <img id="output_image" src="" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <span>Add content</span>
+                   
+                  <label class="validation-error hide" id="ValidationError">The field is
+                    required.</label> <br>
+                   <textarea name="" id="selBlogContent" cols="30" rows="10"></textarea> <br>
+                </div>
+                 
                  <div>
-                   <span>Add content</span>
-                   <textarea name="" id="" cols="30" rows="10"></textarea>
+                   
                  </div>
               </div>
               <div class="col-sm-6">
-                <span>Date</span>
-                <input type="date">
-                <span>Add Category</span>
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                  <option selected>None</option>
-                  <option value="1" id="politics">Politics</option>
-                  <option value="2" id="tech">Technology</option>
-                  <option value="3" id="other">Other</option>
-                </select>
-                <button class="btn btn-success" id="postartbtn">Post</button>
+                
+               
+               
+                <button class="btn btn-success" id="postartbtn" type="submit">Post New Article</button>
               </div>
-            </div>
 
           </div>
-          <div class="col-sm-4">
-            <!--SIDE BAR HERE-->
-          </div>
+          <br>
+          <hr>
+
+
+          <article class="blog-post mb-3">
+            <div class="">
+               <table class="table table-striped" id="post_id">
+                 <thead>
+                   <tr>
+                     <th>Blog Title</th>
+                     <th>Category</th>
+                     <th>Photo Added(Optional)</th>
+                     <th>Date Added</th>
+                     <th>Blog Content</th>
+                     <th>Actions</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <!--POPULATED TABLE ROW FROM SCRIPT-->
+                 </tbody>
+               </table>
+            </div>
+        </article>
+
+          
+        </div>
+        <div class="col-lg-4">
+          <!--SIDE BAR HERE-->
+          <!--POPULAR ARTICLES-->
+    
         </div>
       
       </div>
-      
-    </article>
+
     <!--FOOTER-->
     <footer id="footer">
       <div class="container">
@@ -119,5 +167,8 @@
     </div>
 
    </footer>
+
+   <script src="/js/script.js"></script>
+   <script src="/js/postblog.js"></script>
 </body>
 </html>

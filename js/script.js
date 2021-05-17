@@ -1,6 +1,7 @@
 //post date
 var d = new Date();
 document.getElementById('post-date-author').innerHTML = d;
+
 var attempt = 3;
 function validate() {
     var username = document.getElementById('floatingInput').value;
@@ -41,11 +42,11 @@ function resetAll() {
 
 }
 
-//WELCOME MESSAGE
+//WELCOME MESSAGE AFTER LOGGING IN
 window.onload = function () {
     if(localStorage){
         if(document.getItem('floatingInput')) {
-            document.getElementById('welcomeMessage').textContent = "Hi " + localStorage.getItem('floatingInput');
+            document.getElementById('welcomeMessage').textContent = "Hello " + localStorage.getItem('floatingInput');
         } else{
             location.href = './login.html';
         }
@@ -55,4 +56,15 @@ window.onload = function () {
 function logout(){
     localStorage.clear();
     location.href = './login.html';
+}
+
+//SELECT PREVIEW PHOTO
+function preview_image(event){
+    var reader =new FileReader();
+    reader.onload = function()
+    {
+        var output = document.getElementById('output_image');
+        output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
 }

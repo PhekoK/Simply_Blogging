@@ -5,4 +5,17 @@ body{
 #footer{
   background-color: black;
   color: beige;
+  margin-bottom: 0px;
+}
+
+#postb{
+  height: 80%;
+}
+
+#nav{
+  margin-top: 20px;
+}
+
+.welcomeMessage{
+  color: black;
 }

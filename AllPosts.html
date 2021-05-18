@@ -1,193 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-	   <link rel="preconnect" href="https://fonts.gstatic.com">
-       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
-	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	   <link rel="preconnect" href="https://fonts.gstatic.com">
-       <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 
-       <!--Link CSS styling to this page-->
-       <link rel="stylesheet" href="css/style.css">
-       <meta charset="UTF-8">
-	   <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <!--Link CSS styling to this page-->
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
 
-       <title>Simply Bloggin #All Articles</title>
-<style>
+    <title>#All Articles</title>
+    <style>
 
-</style>
+    </style>
 </head>
+
 <body>
-    <header id="mast">
-        <div class="container" id="nav">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="index.html">Simply Bloggin'</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#post">Post</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#contact">Contact</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#about">About</a>
-                      </li>
-                    </ul>
-                    <form class="d-flex">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                  </div>
-                </div>
-           </div>
-        
-          </nav>
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-lg" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Simply Bloggin'</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./dashboard.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./postArticle.html">Add New Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./AllPosts.html">View All Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./contactUs.html">Contact Me</a>
+                        <span class="btn btn-light" id="welcomeMessage"></span>
+                    </li>
+                </ul>
+                <!-- <form class="form-inline my-2 my-lg-0">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+                <li class="nav-item">
+                    <a class="btn btn-dark" onClick="logout();" aria-current="page" href="#">Logout</a>
+                </li>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!--WHERE THE POSTS ARE-->
 
-    <section id="home" class="section">
+    <section id="home" class="section text-center">
+        <div>
+            <br>
+            <hr>
+            <h1>All Articles</h1>
+            <hr>
+            <p>Check out the latest news and updates below.</p>
+        </div>
         <div class="wrap">
             <div id="blog-header">
-                <h3 id="post-title">Lorem Ipsum dolorC/O https://placeholder.com/text/lorem-ipsum/ </h3>
-                <h6 id="post-date-author">Posted: by </h6>
+                <h3 id="post-title">History of Women’s Football in Britain and Modern Revival</h3>
+                <h6 id="post-date-author">Posted: by  </h6>
             </div>
             <div id="blog-content">
                 <p>
-                    Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem Ipsum dolor
-Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-C/O https://placeholder.com/text/lorem-ipsum/
-                </p>
+                    Football is arguably the biggest phenomenon in the United Kingdom, just look at the outcry in the
+                    face of the recent European Super league proposal. If baseball is America’s pastime, then football
+                    is the UK’s all-the-time. Football in Britain is something to be proud of, with many proclaiming the
+                    Premier League to be the greatest league in the world, and there is a strong point to be made to
+                    this affect.
+
+                    Where this pride has often fallen away, however, is in the face of women’s football. Not only does
+                    the United Kingdom have a rich men’s footballing history, but it also has a rich women’s footballing
+                    history too. And whilst many throughout time have done their best to wipe out and disregard this
+                    fact, we are now finally beginning to see a rebirth of the women’s game.
+
+                    History
+                    For as long as men have played football, so have women. These roots can be definitively traced back
+                    at least as far as the late 18th century, when football was a casual affair.
+
+                    The 19th century saw the introduction of Association football, the rules were finalized and
+                    standardized and the sport took off. Just as men set up teams, women looked to also. As women took
+                    more of an interest in football, the resistance to them doing so grew. For them it was deemed a
+                    hobby; playing for fun was fine but regulating it as a formal sport was not in the eyes of the
+                    Association.
+
+                    First Clubs
+                    In the face of this objection, two teams managed to establish themselves, but they faced harsh
+                    press. Much was aimed at their appearance and their intrusion into a man’s game. This ugly model has
+                    long informed the dialogue surrounding women and football.
+
+                    The first club to arise was Mrs. Graham’s XI, established in Scotland in 1881, by Helen Graham
+                    Matthews. On the 9th of May that year they played their first game, but in just their second game
+                    they faced violent protest and pitch invasions and were forced to abandon their project. </p>
 
             </div>
         </div>
     </section>
     <section id="home" class="section">
         <div class="wrap">
-            <div id="blog_header">
-                <h3>
-                    Lorem Ipsum dolor
-
-C/O https://placeholder.com/text/lorem-ipsum/
-                </h3>
+            <div id="blog-header">
+                <h3 id="post-title">History of Women’s Football in Britain and Modern Revival</h3>
+                <h6 id="post-date-author">Posted: by  </h6>
             </div>
-            <div id="blog_content">
+            <div id="blog-content">
                 <p>
-                    Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Football is arguably the biggest phenomenon in the United Kingdom, just look at the outcry in the
+                    face of the recent European Super league proposal. If baseball is America’s pastime, then football
+                    is the UK’s all-the-time. Football in Britain is something to be proud of, with many proclaiming the
+                    Premier League to be the greatest league in the world, and there is a strong point to be made to
+                    this affect.
 
-Lorem Ipsum dolor
+                    Where this pride has often fallen away, however, is in the face of women’s football. Not only does
+                    the United Kingdom have a rich men’s footballing history, but it also has a rich women’s footballing
+                    history too. And whilst many throughout time have done their best to wipe out and disregard this
+                    fact, we are now finally beginning to see a rebirth of the women’s game.
 
-Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    History
+                    For as long as men have played football, so have women. These roots can be definitively traced back
+                    at least as far as the late 18th century, when football was a casual affair.
 
-C/O https://placeholder.com/text/lorem-ipsum/
-                </p>
+                    The 19th century saw the introduction of Association football, the rules were finalized and
+                    standardized and the sport took off. Just as men set up teams, women looked to also. As women took
+                    more of an interest in football, the resistance to them doing so grew. For them it was deemed a
+                    hobby; playing for fun was fine but regulating it as a formal sport was not in the eyes of the
+                    Association.
+
+                    First Clubs
+                    In the face of this objection, two teams managed to establish themselves, but they faced harsh
+                    press. Much was aimed at their appearance and their intrusion into a man’s game. This ugly model has
+                    long informed the dialogue surrounding women and football.
+
+                    The first club to arise was Mrs. Graham’s XI, established in Scotland in 1881, by Helen Graham
+                    Matthews. On the 9th of May that year they played their first game, but in just their second game
+                    they faced violent protest and pitch invasions and were forced to abandon their project. </p>
 
             </div>
-
         </div>
     </section>
     <section id="home" class="section">
         <div class="wrap">
-            <div id="blog_header">
-                <h3>
-                    Lorem Ipsum dolor
-
-C/O https://placeholder.com/text/lorem-ipsum/
-                </h3>
+            <div id="blog-header">
+                <h3 id="post-title">History of Women’s Football in Britain and Modern Revival</h3>
+                <h6 id="post-date-author">Posted: by  </h6>
             </div>
-            <div id="blog_content">
+            <div id="blog-content">
                 <p>
-                    Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Football is arguably the biggest phenomenon in the United Kingdom, just look at the outcry in the
+                    face of the recent European Super league proposal. If baseball is America’s pastime, then football
+                    is the UK’s all-the-time. Football in Britain is something to be proud of, with many proclaiming the
+                    Premier League to be the greatest league in the world, and there is a strong point to be made to
+                    this affect.
 
-Lorem Ipsum dolor
+                    Where this pride has often fallen away, however, is in the face of women’s football. Not only does
+                    the United Kingdom have a rich men’s footballing history, but it also has a rich women’s footballing
+                    history too. And whilst many throughout time have done their best to wipe out and disregard this
+                    fact, we are now finally beginning to see a rebirth of the women’s game.
 
-Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    History
+                    For as long as men have played football, so have women. These roots can be definitively traced back
+                    at least as far as the late 18th century, when football was a casual affair.
 
-C/O https://placeholder.com/text/lorem-ipsum/
-                </p>
+                    The 19th century saw the introduction of Association football, the rules were finalized and
+                    standardized and the sport took off. Just as men set up teams, women looked to also. As women took
+                    more of an interest in football, the resistance to them doing so grew. For them it was deemed a
+                    hobby; playing for fun was fine but regulating it as a formal sport was not in the eyes of the
+                    Association.
+
+                    First Clubs
+                    In the face of this objection, two teams managed to establish themselves, but they faced harsh
+                    press. Much was aimed at their appearance and their intrusion into a man’s game. This ugly model has
+                    long informed the dialogue surrounding women and football.
+
+                    The first club to arise was Mrs. Graham’s XI, established in Scotland in 1881, by Helen Graham
+                    Matthews. On the 9th of May that year they played their first game, but in just their second game
+                    they faced violent protest and pitch invasions and were forced to abandon their project. </p>
 
             </div>
-
         </div>
     </section>
     <section id="home" class="section">
         <div class="wrap">
-            <div id="blog_header">
-                <h3>
-                    Lorem Ipsum dolor
-
-C/O https://placeholder.com/text/lorem-ipsum/
-                </h3>
+            <div id="blog-header">
+                <h3 id="post-title">History of Women’s Football in Britain and Modern Revival</h3>
+                <h6 id="post-date-author">Posted: by  </h6>
             </div>
-            <div id="blog_content">
+            <div id="blog-content">
                 <p>
-                    Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Football is arguably the biggest phenomenon in the United Kingdom, just look at the outcry in the
+                    face of the recent European Super league proposal. If baseball is America’s pastime, then football
+                    is the UK’s all-the-time. Football in Britain is something to be proud of, with many proclaiming the
+                    Premier League to be the greatest league in the world, and there is a strong point to be made to
+                    this affect.
 
-Lorem Ipsum dolor
+                    Where this pride has often fallen away, however, is in the face of women’s football. Not only does
+                    the United Kingdom have a rich men’s footballing history, but it also has a rich women’s footballing
+                    history too. And whilst many throughout time have done their best to wipe out and disregard this
+                    fact, we are now finally beginning to see a rebirth of the women’s game.
 
-Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    History
+                    For as long as men have played football, so have women. These roots can be definitively traced back
+                    at least as far as the late 18th century, when football was a casual affair.
 
-C/O https://placeholder.com/text/lorem-ipsum/
-                </p>
+                    The 19th century saw the introduction of Association football, the rules were finalized and
+                    standardized and the sport took off. Just as men set up teams, women looked to also. As women took
+                    more of an interest in football, the resistance to them doing so grew. For them it was deemed a
+                    hobby; playing for fun was fine but regulating it as a formal sport was not in the eyes of the
+                    Association.
 
-                <div class="form-floating">
-                    <div><h6>Posted By: </h6></div>
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Comments</label>
-                  </div>
+                    First Clubs
+                    In the face of this objection, two teams managed to establish themselves, but they faced harsh
+                    press. Much was aimed at their appearance and their intrusion into a man’s game. This ugly model has
+                    long informed the dialogue surrounding women and football.
+
+                    The first club to arise was Mrs. Graham’s XI, established in Scotland in 1881, by Helen Graham
+                    Matthews. On the 9th of May that year they played their first game, but in just their second game
+                    they faced violent protest and pitch invasions and were forced to abandon their project. </p>
 
             </div>
-
         </div>
     </section>
-  <!--Footer-->
-  <footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <a class="footer-logo" href="">Simply Bloggin'</a>
-                <p>Something abou t the blog.</p>
+    <section id="home" class="section">
+        <div class="wrap">
+            <div id="blog-header">
+                <h3 id="post-title">History of Women’s Football in Britain and Modern Revival</h3>
+                <h6 id="post-date-author">Posted: by  </h6>
             </div>
-            <div class="col-md-4">
-                <h4>Useful links</h4>
-                <ul>
-                    <li><a>Home</a></li>
-                    <li><a>Terms and COnditions</a></li>
-                    <li><a>Contact Us</a></li>
-                    <li><a>Privacy Policy</a></li>
-                    <li><a>Newsletter</a></li>
-                </ul>
-         </div>
-         <div class="col-md-4">
-                <h4>Newsletter</h4>
-                <form class="d-flex">
-                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                 <button class="btn btn-outline-success" type="submit">Search</button>
-               </form>
-         </div>
-        </div>
-        <div class="w-100 text-center credits">
-            <p>Made by <a>Karabo Pheko</a> &copy; 2021. All rights reserved.</p>
-        </div>
-    </div>
+            <div id="blog-content">
+                <p>
+                    Football is arguably the biggest phenomenon in the United Kingdom, just look at the outcry in the
+                    face of the recent European Super league proposal. If baseball is America’s pastime, then football
+                    is the UK’s all-the-time. Football in Britain is something to be proud of, with many proclaiming the
+                    Premier League to be the greatest league in the world, and there is a strong point to be made to
+                    this affect.
 
- </footer>
- <!--Java Script-->
- <script>
+                    Where this pride has often fallen away, however, is in the face of women’s football. Not only does
+                    the United Kingdom have a rich men’s footballing history, but it also has a rich women’s footballing
+                    history too. And whilst many throughout time have done their best to wipe out and disregard this
+                    fact, we are now finally beginning to see a rebirth of the women’s game.
 
- </script>
+                    History
+                    For as long as men have played football, so have women. These roots can be definitively traced back
+                    at least as far as the late 18th century, when football was a casual affair.
+
+                    The 19th century saw the introduction of Association football, the rules were finalized and
+                    standardized and the sport took off. Just as men set up teams, women looked to also. As women took
+                    more of an interest in football, the resistance to them doing so grew. For them it was deemed a
+                    hobby; playing for fun was fine but regulating it as a formal sport was not in the eyes of the
+                    Association.
+
+                    First Clubs
+                    In the face of this objection, two teams managed to establish themselves, but they faced harsh
+                    press. Much was aimed at their appearance and their intrusion into a man’s game. This ugly model has
+                    long informed the dialogue surrounding women and football.
+
+                    The first club to arise was Mrs. Graham’s XI, established in Scotland in 1881, by Helen Graham
+                    Matthews. On the 9th of May that year they played their first game, but in just their second game
+                    they faced violent protest and pitch invasions and were forced to abandon their project. </p>
+
+            </div>
+        </div>
+    </section>
+    <section id="home" class="section">
+        <div class="wrap">
+            <div id="blog-header">
+                <h3 id="post-title">History of Women’s Football in Britain and Modern Revival</h3>
+                <h6 id="post-date-author">Posted: by  </h6>
+            </div>
+            <div id="blog-content">
+                <p>
+                    Football is arguably the biggest phenomenon in the United Kingdom, just look at the outcry in the
+                    face of the recent European Super league proposal. If baseball is America’s pastime, then football
+                    is the UK’s all-the-time. Football in Britain is something to be proud of, with many proclaiming the
+                    Premier League to be the greatest league in the world, and there is a strong point to be made to
+                    this affect.
+
+                    Where this pride has often fallen away, however, is in the face of women’s football. Not only does
+                    the United Kingdom have a rich men’s footballing history, but it also has a rich women’s footballing
+                    history too. And whilst many throughout time have done their best to wipe out and disregard this
+                    fact, we are now finally beginning to see a rebirth of the women’s game.
+
+                    History
+                    For as long as men have played football, so have women. These roots can be definitively traced back
+                    at least as far as the late 18th century, when football was a casual affair.
+
+                    The 19th century saw the introduction of Association football, the rules were finalized and
+                    standardized and the sport took off. Just as men set up teams, women looked to also. As women took
+                    more of an interest in football, the resistance to them doing so grew. For them it was deemed a
+                    hobby; playing for fun was fine but regulating it as a formal sport was not in the eyes of the
+                    Association.
+
+                    First Clubs
+                    In the face of this objection, two teams managed to establish themselves, but they faced harsh
+                    press. Much was aimed at their appearance and their intrusion into a man’s game. This ugly model has
+                    long informed the dialogue surrounding women and football.
+
+                    The first club to arise was Mrs. Graham’s XI, established in Scotland in 1881, by Helen Graham
+                    Matthews. On the 9th of May that year they played their first game, but in just their second game
+                    they faced violent protest and pitch invasions and were forced to abandon their project. </p>
+
+            </div>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a class="footer-logo" href="">Simply Bloggin'</a>
+                    <p>Simply Bloggin is a platform of network, getting popular news and sharing your experiences by
+                        posting on this platform and share it with your friends.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Useful links</h4>
+                    <ul>
+                        <li><a>Home</a></li>
+                        <li><a>Terms and COnditions</a></li>
+                        <li><a>Contact Us</a></li>
+                        <li><a>Privacy Policy</a></li>
+                        <li><a>Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Newsletter</h4>
+                    <form class="d-flex">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-danger" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="w-100 text-center credits">
+                <p>Made by <a>Karabo Pheko</a> &copy; 2021. All rights reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+    <!--Java Script-->
+    <script src="./js/script.js"></script>
 
 </body>
+
 </html>

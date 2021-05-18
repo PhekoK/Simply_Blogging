@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	  <title>Simply Blogging #Home</title>
 
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-	   <link rel="preconnect" href="https://fonts.gstatic.com">
-       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	  <link rel="preconnect" href="https://fonts.gstatic.com">
+	  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link rel="preconnect" href="https://fonts.gstatic.com">
+	  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+	  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
 
 
-	   <link rel="stylesheet" href="css/style.css">
-       <meta charset="UTF-8">
-	   <meta name="viewport" content="width=device-width, intial-scale=1.0">
-	   
-	   <title>Home Page</title>
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+   <!--EXTERNAL BOOTSTRAP HERE-->
+   <link rel="stylesheet" href="./css/style.css">
+
+	   <title>Contact Us Page</title>
 	   <style>
 
 	   </style>
@@ -24,44 +30,41 @@
 	   <!--Search Bar-->
 	   
 		
-		
-	 <header id="mast">
+	
 
-		<div class="container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
-			
+		   <!--NAVIGATION BAR-->
+		   <nav class="navbar navbar-expand-lg" id="nav">
 			<div class="container-fluid">
-			  <a class="navbar-brand" href="#">Simply Bloggin'</a>
+			  <a class="navbar-brand" href="./dashboard.html">Simply Bloggin'</a>
 			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				  <li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">Home</a>
+					<a class="nav-link active" aria-current="page" href="./dashboard.html">Home</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="#">Post</a>
+					<a class="nav-link" href="./postArticle.html">Add New Post</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" aria-current="page" href="#">Contact</a>
-				  </li>
+					<a class="nav-link" href="./AllPosts.html">View All Posts</a>
+				</li>
 				  <li class="nav-item">
-					<a class="nav-link" aria-current="page" href="#">About</a>
+					<a class="nav-link" aria-current="page" href="./contactUs.html">Contact Me</a>
+					<span class="btn btn-light" id="welcomeMessage"></span>
 				  </li>
 				</ul>
-				<form class="d-flex">
-				  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-				  <button class="btn btn-outline-success" type="submit">Search</button>
-				</form>
+			   <!-- <form class="form-inline my-2 my-lg-0">
+				  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+				  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form> -->
+				<li class="nav-item">
+					<a class="btn btn-dark" onClick="logout();" aria-current="page" href="#">Logout</a>
+				  </li>
 			  </div>
 			</div>
-	   </div>
-	
 	  </nav>
-	</div>
-
-	 </header>
      
 	 
 		 <!--Popular posts goes here-->
@@ -69,29 +72,120 @@
 
 	<div class="main-container">
 		<section>
+			<div class="row text-center py-4">
+				<div>
+					<br>   <hr>
+					<h1>Contact Me</h1>
+					<hr>
+					<p>This page is dedicated to contact us. If you want any more information, don't hesitate to reach us out.</p>
+				</div>
+
+
+				<div class="col-md-10 col-lg-10">
+					<h4 class="mb-12">Fill in the form below</h4>
+					<form class="needs-validation" novalidate>
+					  <div class="row g-3">
+						<div class="col-sm-6">
+						  <label for="firstName" class="form-label">First name</label>
+						  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+						  <div class="invalid-feedback">
+							Valid first name is required.
+						  </div>
+						</div>
+			
+						<div class="col-sm-6">
+						  <label for="lastName" class="form-label">Last name</label>
+						  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+						  <div class="invalid-feedback">
+							Valid last name is required.
+						  </div>
+						</div>
+			
+						<div class="col-12">
+						  <label for="username" class="form-label">Username</label>
+						  <div class="input-group has-validation">
+							<span class="input-group-text">@</span>
+							<input type="text" class="form-control" id="username" placeholder="Username" required>
+						  <div class="invalid-feedback">
+							  Your username is required.
+							</div>
+						  </div>
+						</div>
+			
+						<div class="col-12">
+						  <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+						  <input type="email" class="form-control" id="email" placeholder="you@example.com">
+						  <div class="invalid-feedback">
+							Please enter a valid email address for any updates.
+						  </div>
+						</div>
+
+						<div class="col-sm-12">
+							<label for="message" class="form-label">Your Message</label> <br>
+							<!--<input type="text" class="form-control" id="message" placeholder="" value="" required> -->
+							<textarea rows="4" cols="75" name="message" placeholder="Your Message Here"></textarea>
+							<div class="invalid-feedback">
+							  Please complete the message, it is required.
+							</div>
+						  </div>
+			
+					  </div>
+			
+					  <hr class="my-4">
+			
+					  <button class="w-100 btn btn-outline-success" type="submit" id="btnSubmitMsg" onClick="forwardMessage()">Submit</button>
+					</form>
+				  </div>
+
+			</div>
+
+			<div class="row text-center" id="contactmeid">
+				
+
+			</div>
+
+			
+
 
 		</section>
 	  
 	  </div>
 
-	 <!--Footer-->
-     <footer id="footer">
-        <div>
-            <div class="col-1">
-                (c) Copyright my website <p>Contact us for more info</p>
+	 <!--FOOTER-->
+	 <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a class="footer-logo" href="">Simply Bloggin'</a>
+                    <p>Simply Bloggin is a platform of network, getting popular news and sharing your experiences by
+                        posting on this platform and share it with your friends.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Useful links</h4>
+                    <ul>
+                        <li><a>Home</a></li>
+                        <li><a>Terms and COnditions</a></li>
+                        <li><a>Contact Us</a></li>
+                        <li><a>Privacy Policy</a></li>
+                        <li><a>Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Newsletter</h4>
+                    <form class="d-flex">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-danger" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
-            <div class="col-1">
-                <ul>
-                    <li>Network</li>
-                    <li>More Links</li>
-                    <li>Even more links</li>
-                </ul>
+            <div class="w-100 text-center credits">
+                <p>Made by <a>Karabo Pheko</a> &copy; 2021. All rights reserved.</p>
             </div>
         </div>
+
     </footer>
-	  <div>
+	 
 
-
-	  </div>
+	<script src="./js/script.js"></script>
 	</body>
 </html>

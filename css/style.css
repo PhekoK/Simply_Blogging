@@ -1,21 +1,158 @@
 body{
-  font-family: 'Girassol', cursive;
+  font-family: 'Newsreader', serif;
+  background-color: #fff;
 }
 
+h1,h2,h3,h4,h5{
+  font-weight: 700;
+}
+
+.wrap{
+  align-items: center;
+  text-align: center;
+  margin: 50px;
+  padding: 20px;
+}
 #footer{
-  background-color: black;
-  color: beige;
-  margin-bottom: 0px;
+ /* position: absolute; */
+   left:0px;
+   bottom:0px;
+   width:100%;
+   color: beige;
+   background:black;
+}
+
+img{
+  filter: grayscale(50%) brightness(0.8);
+}
+img.rounded-circle{
+  filter: none;
+  border: 2px solid #66FCF1;
+}
+
+/*MAIN BLOG*/
+.blog-posts{
+  background-color: rgb(31, 45, 58);
+  color: antiquewhite;
+}
+.blog-post{
+  background-color: #384555;
+}
+.blog-post p{
+  font-size: 0.9rem;
+}
+.blog-post img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.badges > a{
+  margin-left: 0.5rem;
+  margin: 0.2rem;
+  padding: 0.8rem;
+  background-color:#475566;
+  color: whitesmoke;
+}
+.badges{
+  margin-top: 1rem;
+}
+.blog-post .col-sm-9{
+  border-left: 3px dotted #66FCF1;
+}
+.bloghead{
+  color: #fff;
+}
+
+/*Side Bar*/
+.social-links{
+  color: #fff;
+  background-color: #475566;
+  font-size: 1.5rem;
+}
+.social-links> a{
+  color: #fff;
+}
+.aside-heading{
+  border-left: 3px solid #66FCF1;
+}
+.author-social-links a{
+  margin-left: 0.8rem;
+}
+
+.badge > a{
+  margin-left: 0.5rem;
+  padding: 0.8rem;
+  background-color:#475566;
+  color: whitesmoke;
+}
+.badge{
+  margin-top: 1rem;
 }
 
 #postb{
   height: 80%;
 }
-
-#nav{
-  margin-top: 20px;
+.navbar{
+  background:rgb(31, 45, 58) !important;
+  color: antiquewhite;
+}
+.navbar-brand{
+  color: #66FCF1 !important;
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 
-.welcomeMessage{
-  color: black;
+.hero{
+  background-color: rgb(240, 232, 195);
 }
+.hero-post{
+  position: relative;
+}
+.hero-post-badges{
+  position: absolute;
+  top: 80px;
+  bottom: 99px;
+}
+.hero-post-badges > a{
+  display: block;
+  background-color: #0B0C10;
+  color: whitesmoke;
+  font-size: 0.9rem;
+}
+.hero-post-content{
+  position: absolute;
+  bottom: 100px;
+  color: #fff;
+}
+
+
+.nav-link{
+  color: antiquewhite !important;
+}
+
+
+#btnSubmitMsg{
+  background-color: rgb(31, 45, 58) ;
+  color: white;
+}
+
+#postartbtn{
+  background-color: rgb(31, 45, 58) ;
+  color: white;
+}
+
+/*READ MORE FUNCTION*/
+#more {display: none;}
+
+#myBtn1{background-color: rgb(31, 45, 58) ;
+  color: white;}
+
+#myBtn2{background-color: rgb(31, 45, 58) ;
+    color: white;}
+  
+#myBtn3{background-color: rgb(31, 45, 58) ;
+      color: white;}
+#myBtn4{background-color: rgb(31, 45, 58) ;
+        color: white;}
+#myBtn5{background-color: rgb(31, 45, 58) ;
+          color: white;}

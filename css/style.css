@@ -95,6 +95,7 @@ img.rounded-circle{
 .navbar{
   background:rgb(31, 45, 58) !important;
   color: antiquewhite;
+  margin: 2px;
 }
 .navbar-brand{
   color: #66FCF1 !important;
@@ -112,9 +113,10 @@ img.rounded-circle{
   position: absolute;
   top: 80px;
   bottom: 99px;
+  
 }
 .hero-post-badges > a{
-  display: block;
+  display:inline;
   background-color: #0B0C10;
   color: whitesmoke;
   font-size: 0.9rem;
@@ -156,3 +158,18 @@ img.rounded-circle{
         color: white;}
 #myBtn5{background-color: rgb(31, 45, 58) ;
           color: white;}
+
+#cr{
+  background-color: #475566;
+  color: #fff;
+}
+
+/*ALLPOST PAGE*/
+#section1{
+  background: url('./img/football.jpg');
+}
+
+.postblog{
+  align-items: center;
+  text-align: center;
+}

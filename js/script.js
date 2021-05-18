@@ -197,3 +197,7 @@ function preview_image(event){
       moreText.style.display = "inline";
     }
   }
+
+  function continueReading(){
+
+  }

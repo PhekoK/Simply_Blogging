@@ -45,3 +45,10 @@
     #logcont{
         align-items: center;
     }
+
+    .logfirst{
+        align-items: center;
+        margin-top: 0%;
+        margin: 100px;
+        text-align: center;
+    }

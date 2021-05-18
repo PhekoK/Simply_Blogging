@@ -173,3 +173,15 @@ img.rounded-circle{
   align-items: center;
   text-align: center;
 }
+
+.me-post{
+  align-items: center;
+}
+.main-container{
+  margin-left: 170px;
+  align-items: center;
+}
+
+.message{
+  width: 100%;
+}

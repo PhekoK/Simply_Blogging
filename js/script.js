@@ -1,6 +1,7 @@
+var selectedRow = null;
 //post date
 var d = new Date();
-document.getElementById('post-date-author').innerHTML = d;
+document.getElementById('post-date-author').innerHTML = d + ` by ` + localStorage.getItem('floatingInput');
 
 //WELCOME MESSAGE AFTER LOGGING IN
 window.onload = function () {
@@ -160,3 +161,34 @@ function preview_image(event){
   function continueReading(){
 
   }
+
+  //Comments Section
+  window.onclick = function(e)
+    {   var id =  e.target.id;   
+     if (id === 'sent')  
+     {
+
+        var txt = document.getElementById('example').value   
+                 + "\n </br> Posted by " + localStorage.getItem('floatingInput') + `</br><a class="btn btn-sm btn-secondary" onClick="onDeleteComment(this)">Delete</a>
+                 <a class="btn btn-sm btn-secondary" onClick="onEdit(this)">Edit</a>`;  
+        $( "#para" ).empty().append( txt );
+       
+     }
+    }
+
+    function resetForm() {
+      document.getElementById('example').value = "";
+      selectedRow = null;
+  }
+
+
+
+    function onDeleteComment(data){
+      if (confirm('Are you sure to delete this comment? ')) {
+        var currentRow = data.parentElement.parentElement;
+        document.getElementById('post_id').deleteRow(currentRow.rowIndex);
+        resetForm();
+    }
+    }
+
+    /**Add new Blog */

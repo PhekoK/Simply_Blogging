@@ -188,3 +188,33 @@ img.rounded-circle{
   width: 100%;
 }
 
+.soc-lik {
+  margin-top: 40px;
+}
+
+/*COMMENTS SECTION*/
+.info{
+  border: 1px solid black;
+  margin: 20px;
+  padding: 10px;
+}
+.newComments{
+  border: 1px solid black;
+  margin: 30px;
+  padding: 20px;
+}
+#para{
+  border: 1px solid red;
+}
+
+#sent{
+  background-color: rgb(31, 45, 58);
+  color: antiquewhite;
+  width: 70%;
+  margin: 20px;
+}
+
+#example{
+  width: 80%;
+  height: 100px;
+}

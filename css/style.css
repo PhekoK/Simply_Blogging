@@ -1,6 +1,6 @@
 body{
   font-family: 'Newsreader', serif;
-  background-color: #fff;
+  background-color: beige;
 }
 
 h1,h2,h3,h4,h5{
@@ -205,6 +205,9 @@ img.rounded-circle{
 }
 #para{
   border: 1px solid red;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 #sent{
@@ -217,4 +220,7 @@ img.rounded-circle{
 #example{
   width: 80%;
   height: 100px;
+}
+ul{
+  list-style: none;
 }

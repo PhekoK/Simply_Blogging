@@ -169,8 +169,8 @@ function preview_image(event){
      {
 
         var txt = document.getElementById('example').value   
-                 + "\n </br> Posted by " + localStorage.getItem('floatingInput') + `</br><a class="btn btn-sm btn-secondary" onClick="onDeleteComment(this)">Delete</a>
-                 <a class="btn btn-sm btn-secondary" onClick="onEdit(this)">Edit</a>`;  
+                 + "\n </br> Posted by " + localStorage.getItem('floatingInput') + `</br><a class="btn btn-sm btn-danger" onClick="onDeleteComment(this)">Delete</a>
+                 <a class="btn btn-sm btn-secondary" onClick="onEdit(this)">Edit</a><a class="btn btn-sm btn-secondary" onClick="reply(this)">Reply</a>`;  
         $( "#para" ).empty().append( txt );
        
      }

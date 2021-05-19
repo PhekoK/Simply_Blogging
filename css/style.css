@@ -28,6 +28,8 @@ img{
 img.rounded-circle{
   filter: none;
   border: 2px solid #66FCF1;
+  width: 100px;
+  height: 100px;
 }
 
 /*MAIN BLOG*/

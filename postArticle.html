@@ -103,7 +103,7 @@
                                 </div>
                 </div>
 
-                <button class="w-100 btn btn-outline-success" type="submit" id="btnSubmitMsg" onClick="submitBlog()">Submit</button>
+                <button class="w-100 btn btn-outline-success" type="submit" id="btnSubmitMsg" onClick="">Submit</button>
 
             </div>
 
@@ -148,26 +148,8 @@
 
             <script src="/js/script.js"></script>
             <script src="/js/postblog.js"></script>
-            <script type="text/template" id="add-tpl">
-
-    <h2>Adding a New Blog</h2>
-
-    <form class="form-add" role="form">
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" name="title" class="form-control" id="title" placeholder="Enter Your Blog Title" >
-      </div>
-      <div class="form-group">
-        <label for="content">Content</label>
-        <textarea name="content" class="form-control"cols="30" rows="20"></textarea>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-    </form>
-  </script>
-            <script type="text/template" id="welcome-tpl">
-    <h2>Welcome, <%username %>!</h2>
-    <button class="add-blog btn btn-lg btn-primary">Add New Blog Post</button>
-  </script>
+            <script src="/js/postArticle.js"></script>
+           
 </body>
 
 </html>

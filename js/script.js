@@ -190,5 +190,6 @@ function preview_image(event){
         resetForm();
     }
     }
+    
 
     /**Add new Blog */

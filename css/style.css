@@ -224,3 +224,6 @@ img.rounded-circle{
 ul{
   list-style: none;
 }
+#post-date-author{
+  font-weight: 700;
+}

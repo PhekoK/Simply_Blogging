@@ -184,12 +184,12 @@ function preview_image(event){
 
 
     function onDeleteComment(data){
-      if (confirm('Are you sure to delete this comment? ')) {
+      if (confirm('Are you sure you want to delete this comment? ')) {
         var currentRow = data.parentElement.parentElement;
         document.getElementById('post_id').deleteRow(currentRow.rowIndex);
         resetForm();
     }
     }
-    
+
 
     /**Add new Blog */

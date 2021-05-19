@@ -16,9 +16,12 @@ function sendBlog(){
             //Retrieve Your Data
             $(".btnSubmitMsg").click(function () {
                 var txt = document.getElementById('blog-title').value   
-                 + "\n </br> Posted by " + localStorage.getItem('floatingInput') + `</br><a class="btn btn-sm btn-danger" onClick="onDeleteComment(this)">Delete</a>
-                 <a class="btn btn-sm btn-secondary" onClick="onEdit(this)">Edit</a><a class="btn btn-sm btn-secondary" onClick="reply(this)">Reply</a>`;  
+                 + "\n </br> Posted by " + localStorage.getItem('floatingInput'); 
                 $( "#new-blog-title" ).empty().append( txt );
+                var contt = document.getElementById('blog-content').value + `</br><a class="btn btn-sm btn-danger" onClick="onDeleteComment(this)">Delete</a>
+                <a class="btn btn-sm btn-secondary" onClick="onEdit(this)">Edit</a><a class="btn btn-sm btn-secondary" onClick="reply(this)">Reply</a>`;
+                $("#new-blog-cont").empty().append(contt);
+
             })
         })
     }
